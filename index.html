@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafalan Kilat UMPTKIN - Literasi Ajaran Islam</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    },
+                    colors: {
+                        themeGreen: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#022c22',
+                        },
+                        themeGold: {
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #022c22;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #fbbf24;
+            border-radius: 3px;
+        }
+        .glass-card {
+            background: rgba(2, 44, 34, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(251, 191, 36, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-[#011a14] text-gray-100 font-sans selection:bg-themeGold-500 selection:text-[#022c22] min-h-screen flex flex-col justify-between">
+
+    <!-- Top Glow Effect -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[350px] bg-gradient-to-b from-emerald-500/10 via-transparent to-transparent pointer-events-none rounded-full blur-[120px]"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-themeGold-500/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-themeGold-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-950/50">
+                    <i class="fa-solid fa-kaaba text-[#022c22] text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-themeGold-400 block text-glow">UM-PTKIN 2026</span>
+                    <span class="font-extrabold text-base tracking-tight text-white block">Sistem Seleksi Elektronik</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-1">
+                <a href="#belajar" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-emerald-950/40 transition">Peta Belajar</a>
+                <a href="#materi" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-emerald-950/40 transition">Modul Ringkas</a>
+                <a href="#cheatsheet" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-emerald-950/40 transition">Cheat Sheet</a>
+                <a href="#kuis" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:text-white hover:bg-emerald-950/40 transition">Simulasi Kuis</a>
+            </nav>
+
+            <a href="#planner" class="px-4 py-2 bg-gradient-to-r from-themeGold-500 to-amber-500 hover:from-themeGold-600 hover:to-amber-600 text-[#022c22] font-bold rounded-xl text-sm transition-all shadow-md shadow-themeGold-500/10 hover:shadow-themeGold-500/20 text-center">
+                <i class="fa-solid fa-clock-rotate-left mr-1.5"></i> Rencana 2 Jam
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <section class="relative pt-12 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-card border border-themeGold-500/30 text-themeGold-400 text-xs font-bold tracking-wider mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>PAKET DARURAT SEMALAM SEBELUM SSE</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Kuasai Literasi Ajaran Islam <br>
+                <span class="bg-gradient-to-r from-themeGold-400 via-amber-200 to-themeGold-500 bg-clip-text text-transparent">Hafalan Kilat Tanpa Panik</span>
+            </h1>
+            
+            <p class="mt-6 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Panduan komprehensif semalam sebelum ujian UM-PTKIN. Kuasai kata kunci pokok, hindari distraktor semantik, dan latih kesiapan batin melalui 4 pilar materi utama.
+            </p>
+
+            <!-- Quick Action Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+                <div class="glass-card p-5 rounded-2xl text-center transform hover:-translate-y-1 transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-950/60 border border-themeGold-500/10 flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-book-open text-themeGold-400"></i>
+                    </div>
+                    <span class="block text-2xl font-black text-white">4 Rumpun</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1 block">Subtopik Utama</span>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center transform hover:-translate-y-1 transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-950/60 border border-themeGold-500/10 flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-bolt text-themeGold-400"></i>
+                    </div>
+                    <span class="block text-2xl font-black text-white">20 Fakta</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1 block">Top Cheat Sheet</span>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center transform hover:-translate-y-1 transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-950/60 border border-themeGold-500/10 flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-square-poll-vertical text-themeGold-400"></i>
+                    </div>
+                    <span class="block text-2xl font-black text-white">20 Soal</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1 block">Simulasi Kuis</span>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center transform hover:-translate-y-1 transition duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-950/60 border border-themeGold-500/10 flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-hourglass-half text-themeGold-400"></i>
+                    </div>
+                    <span class="block text-2xl font-black text-white">120 Menit</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1 block">Rencana Belajar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rencana Belajar 2 Jam Interaktif -->
+        <section id="planner" class="py-12 bg-emerald-950/20 border-y border-themeGold-500/10 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Rencana Belajar 2 Jam Terakhir</h2>
+                        <p class="text-sm text-gray-400 mt-2">Didesain taktis untuk memanfaatkan sisa waktu tersisa sebelum ujian. Centang langkah yang selesai.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex items-center space-x-3 bg-emerald-950/80 px-4 py-2 rounded-xl border border-themeGold-500/20">
+                        <span class="text-xs font-semibold text-gray-400">Progress Hafalan Anda:</span>
+                        <span id="progress-percent" class="text-base font-black text-themeGold-400 text-glow">0%</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4" id="planner-tasks">
+                    <!-- Task 1 -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-themeGold-500 transition duration-300 flex flex-col justify-between" id="task-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xs font-bold text-themeGold-400 tracking-wider">10 MENIT</span>
+                                <input type="checkbox" onchange="toggleTask('task-1')" class="w-5 h-5 accent-themeGold-500 rounded bg-[#011a14] border-themeGold-500/30 cursor-pointer">
+                            </div>
+                            <h3 class="font-bold text-white text-base">Diagnostik Cepat</h3>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Uji ingatan Anda secara cepat tanpa melihat buku untuk tahu 3 titik paling lemah saat ini.</p>
+                        </div>
+                    </div>
+                    <!-- Task 2 -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-themeGold-500 transition duration-300 flex flex-col justify-between" id="task-2">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xs font-bold text-themeGold-400 tracking-wider">25 MENIT</span>
+                                <input type="checkbox" onchange="toggleTask('task-2')" class="w-5 h-5 accent-themeGold-500 rounded bg-[#011a14] border-themeGold-500/30 cursor-pointer">
+                            </div>
+                            <h3 class="font-bold text-white text-base">Al-Qur'an & Hadits</h3>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Hafalkan sanad/matan, Makki/Madani, serta tema-tema utama dari 4 surah kunci utama.</p>
+                        </div>
+                    </div>
+                    <!-- Task 3 -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-themeGold-500 transition duration-300 flex flex-col justify-between" id="task-3">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xs font-bold text-themeGold-400 tracking-wider">20 MENIT</span>
+                                <input type="checkbox" onchange="toggleTask('task-3')" class="w-5 h-5 accent-themeGold-500 rounded bg-[#011a14] border-themeGold-500/30 cursor-pointer">
+                            </div>
+                            <h3 class="font-bold text-white text-base">Akidah & Akhlak</h3>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Pahami dengan matang klasifikasi Tauhid (Rububiyah-Uluhiyah), Rukun Iman, dan Ihsan.</p>
+                        </div>
+                    </div>
+                    <!-- Task 4 -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-themeGold-500 transition duration-300 flex flex-col justify-between" id="task-4">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xs font-bold text-themeGold-400 tracking-wider">30 MENIT</span>
+                                <input type="checkbox" onchange="toggleTask('task-4')" class="w-5 h-5 accent-themeGold-500 rounded bg-[#011a14] border-themeGold-500/30 cursor-pointer">
+                            </div>
+                            <h3 class="font-bold text-white text-base">Fiqh & Ziswaf</h3>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Hafalkan perbedaan Syarat/Rukun shalat, perbedaan spesifik Zakat-Sedekah-Wakaf, dan Wukuf.</p>
+                        </div>
+                    </div>
+                    <!-- Task 5 -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-themeGold-500 transition duration-300 flex flex-col justify-between" id="task-5">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-xs font-bold text-themeGold-400 tracking-wider">20 MENIT</span>
+                                <input type="checkbox" onchange="toggleTask('task-5')" class="w-5 h-5 accent-themeGold-500 rounded bg-[#011a14] border-themeGold-500/30 cursor-pointer">
+                            </div>
+                            <h3 class="font-bold text-white text-base">Sejarah & Wali Songo</h3>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">Ingat timeline penting: Hijrah, Perang Badar, Fathu Makkah, Khulafa Rasyidun, & Wali Songo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Pilar Materi Interaktif -->
+        <section id="materi" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Eksplorasi Modul 4 Pilar Keislaman</h2>
+                <p class="text-gray-400 mt-2 max-w-xl mx-auto">Pilih salah satu tab materi di bawah ini untuk langsung lompat ke materi yang ingin dimantapkan.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8 bg-emerald-950/40 p-1.5 rounded-2xl max-w-3xl mx-auto border border-themeGold-500/10">
+                <button onclick="switchTab('quran-hadits')" id="btn-quran-hadits" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 bg-gradient-to-r from-themeGold-500 to-amber-500 text-[#022c22]">
+                    <i class="fa-solid fa-book-quran"></i>
+                    <span>Al-Qur'an & Hadits</span>
+                </button>
+                <button onclick="switchTab('akidah-akhlak')" id="btn-akidah-akhlak" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Akidah & Akhlak</span>
+                </button>
+                <button onclick="switchTab('fiqh')" id="btn-fiqh" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Fiqh & Muamalah</span>
+                </button>
+                <button onclick="switchTab('sejarah')" id="btn-sejarah" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-monument"></i>
+                    <span>Sejarah & Wali Songo</span>
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="materi-content" class="transition-all duration-300">
+                <!-- Al Qur'an & Hadits -->
+                <div id="tab-quran-hadits" class="tab-panel grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left: Mindmap & Core Concepts -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                                <span class="w-8 h-8 rounded-lg bg-themeGold-500/10 flex items-center justify-center mr-2"><i class="fa-solid fa-star text-themeGold-400 text-sm"></i></span>
+                                Esensi Pembeda: Al-Qur'an vs Hadits
+                            </h3>
+                            <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                                <strong class="text-themeGold-400">Al-Qur'an</strong> merupakan firman murni Allah SWT yang bernilai ibadah mutlak saat dibaca (wahyu tilawah). Sementara <strong class="text-themeGold-400">Hadits</strong> adalah rekam otentik atas ucapan (qauliyah), perbuatan (fi'liyah), maupun persetujuan (taqririyah) Nabi Muhammad SAW yang berfungsi sebagai penjelas dan pelengkap syariat.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/10">
+                                    <span class="text-xs font-bold text-themeGold-400 uppercase tracking-wider block mb-1">Ciri Khas Makkiyah</span>
+                                    <p class="text-xs text-gray-400 leading-relaxed">Diturunkan sebelum hijrah, ayatnya cenderung pendek, berfokus utama pada urusan tauhid, akhirat, dan fondasi awal keimanan mendasar.</p>
+                                </div>
+                                <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/10">
+                                    <span class="text-xs font-bold text-themeGold-400 uppercase tracking-wider block mb-1">Ciri Khas Madaniyah</span>
+                                    <p class="text-xs text-gray-400 leading-relaxed">Diturunkan setelah hijrah, ayatnya cenderung panjang, sarat akan hukum sosial, kemasyarakatan, aturan muamalah, serta tata kelola komunitas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4 Surah Kunci -->
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4">4 Surah Kunci yang Sering Diuji</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 rounded-xl bg-emerald-950/20 hover:bg-emerald-950/40 transition border border-themeGold-500/5">
+                                    <div class="flex items-center space-x-2.5 mb-2">
+                                        <span class="text-xs font-black text-themeGold-400 bg-themeGold-500/10 px-2 py-0.5 rounded">112:1-4</span>
+                                        <h4 class="font-bold text-white text-sm">QS. Al-Ikhlas</h4>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><strong>Tema Utama:</strong> Tauhid murni, mengesakan Allah secara mutlak, tidak beranak, dan tidak diperanakkan.</p>
+                                </div>
+                                <div class="p-4 rounded-xl bg-emerald-950/20 hover:bg-emerald-950/40 transition border border-themeGold-500/5">
+                                    <div class="flex items-center space-x-2.5 mb-2">
+                                        <span class="text-xs font-black text-themeGold-400 bg-themeGold-500/10 px-2 py-0.5 rounded">49:10-13</span>
+                                        <h4 class="font-bold text-white text-sm">QS. Al-Hujurat</h4>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><strong>Tema Utama:</strong> Persaudaraan (ukhuwah), adab lisan, larangan mencela, gibah, serta ukuran ketakwaan.</p>
+                                </div>
+                                <div class="p-4 rounded-xl bg-emerald-950/20 hover:bg-emerald-950/40 transition border border-themeGold-500/5">
+                                    <div class="flex items-center space-x-2.5 mb-2">
+                                        <span class="text-xs font-black text-themeGold-400 bg-themeGold-500/10 px-2 py-0.5 rounded">107:1-7</span>
+                                        <h4 class="font-bold text-white text-sm">QS. Al-Ma'un</h4>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><strong>Tema Utama:</strong> Kritik tajam bagi pelaku ibadah ritual yang melalaikan aksi peduli sosial (pendusta agama).</p>
+                                </div>
+                                <div class="p-4 rounded-xl bg-emerald-950/20 hover:bg-emerald-950/40 transition border border-themeGold-500/5">
+                                    <div class="flex items-center space-x-2.5 mb-2">
+                                        <span class="text-xs font-black text-themeGold-400 bg-themeGold-500/10 px-2 py-0.5 rounded">103:1-3</span>
+                                        <h4 class="font-bold text-white text-sm">QS. Al-'Asr</h4>
+                                    </div>
+                                    <p class="text-xs text-gray-400"><strong>Tema Utama:</strong> Kerugian manusia kecuali 4 syarat: iman, amal saleh, saling menasihati dalam kebenaran dan kesabaran.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Table Ulumul Hadits -->
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-3xl flex flex-col justify-between h-full">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2">Glosarium Ulumul Hadits</h3>
+                                <p class="text-xs text-gray-400 mb-4">Sangat sering muncul di ujian sebagai opsi jebakan kata sinonim.</p>
+                                <div class="space-y-3.5">
+                                    <div class="border-b border-emerald-950 pb-2.5">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="font-bold text-themeGold-400 text-sm">Sanad</span>
+                                            <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-gray-300 font-semibold">Saluran</span>
+                                        </div>
+                                        <p class="text-xs text-gray-400">Rantai periwayatan (Siapa meriwayatkan dari siapa).</p>
+                                    </div>
+                                    <div class="border-b border-emerald-950 pb-2.5">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="font-bold text-themeGold-400 text-sm">Matan</span>
+                                            <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-gray-300 font-semibold">Isi Teks</span>
+                                        </div>
+                                        <p class="text-xs text-gray-400">Muatan kalimat atau redaksi teks dari hadits tersebut.</p>
+                                    </div>
+                                    <div class="border-b border-emerald-950 pb-2.5">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="font-bold text-themeGold-400 text-sm">Mutawatir</span>
+                                            <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-gray-300 font-semibold">Kuantitas</span>
+                                        </div>
+                                        <p class="text-xs text-gray-400">Diriwayatkan banyak perawi pada tiap generasi, mustahil berdusta.</p>
+                                    </div>
+                                    <div class="border-b border-emerald-950 pb-2.5">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="font-bold text-themeGold-400 text-sm">Sahih</span>
+                                            <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-gray-300 font-semibold">Kualitas</span>
+                                        </div>
+                                        <p class="text-xs text-gray-400">Sanad bersambung, perawi adil & dhabith, bebas syadz dan illat berat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-themeGold-500/10">
+                                <span class="text-xs font-bold text-white block mb-1">Ingat Tip Ujian:</span>
+                                <span class="text-xs text-gray-400">Sahih berbicara tentang <strong class="text-themeGold-400">kualitas keotentikan</strong>, mutawatir berbicara tentang <strong class="text-themeGold-400">kuantitas jalur periwayatan</strong>.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Akidah Akhlak -->
+                <div id="tab-akidah-akhlak" class="tab-panel hidden grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left: Tauhid & Hadits Jibril -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4">Klasifikasi Tauhid</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/10">
+                                    <h4 class="font-bold text-themeGold-400 text-sm mb-1.5">Tauhid Rububiyah</h4>
+                                    <p class="text-xs text-gray-400 leading-relaxed">Mengesakan Allah sebagai satu-satunya Sang Pencipta, Pemelihara, dan Pengatur tunggal alam semesta raya.</p>
+                                </div>
+                                <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/10">
+                                    <h4 class="font-bold text-themeGold-400 text-sm mb-1.5">Tauhid Uluhiyah</h4>
+                                    <p class="text-xs text-gray-400 leading-relaxed">Mengesakan Allah secara mutlak dalam peribadatan (Hanya Allah SWT yang berhak disembah tanpa sekutu).</p>
+                                </div>
+                                <div class="bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/10">
+                                    <h4 class="font-bold text-themeGold-400 text-sm mb-1.5">Asma' wa Sifat</h4>
+                                    <p class="text-xs text-gray-400 leading-relaxed">Menetapkan semua nama indah dan sifat luhur Allah sesuai dalil tanpa menyamakan-Nya dengan makhluk.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-3">Hadits Jibril: Fondasi Trilogy Islam</h3>
+                            <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                                Merupakan hadits agung yang mengisahkan kedatangan Malaikat Jibril yang menyamar, merangkum tiga pilar utama kerangka beragama:
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 rounded bg-[#fbbf24]/10 text-themeGold-400 flex items-center justify-center font-bold text-xs mt-0.5">1</div>
+                                    <div>
+                                        <strong class="text-white text-sm">Islam (Aspek Lahiriah):</strong>
+                                        <p class="text-xs text-gray-400">Diwujudkan secara aktif lewat kepatuhan menjalankan Rukun Islam (Aksi fisik).</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 rounded bg-[#fbbf24]/10 text-themeGold-400 flex items-center justify-center font-bold text-xs mt-0.5">2</div>
+                                    <div>
+                                        <strong class="text-white text-sm">Iman (Aspek Batiniah):</strong>
+                                        <p class="text-xs text-gray-400">Ditanamkan dalam jiwa lewat keyakinan kokoh pada Rukun Iman yang berjumlah 6 perkara.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 rounded bg-[#fbbf24]/10 text-themeGold-400 flex items-center justify-center font-bold text-xs mt-0.5">3</div>
+                                    <div>
+                                        <strong class="text-white text-sm">Ihsan (Kualitas Spiritual):</strong>
+                                        <p class="text-xs text-gray-400"><em>"Engkau beribadah seolah-olah melihat-Nya, jika tak mampu melihat-Nya, ketahuilah Dia melihatmu."</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Akhlak Mahmudah & Mazmumah -->
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                                <i class="fa-solid fa-hands-holding-child text-themeGold-400 mr-2 text-sm"></i>
+                                Penata Akhlak
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-2">Akhlak Mahmudah (Terpuji)</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="text-xs bg-emerald-950/60 border border-emerald-500/20 px-2.5 py-1 rounded text-gray-200">Birrul Walidain (Sopan Ortu)</span>
+                                        <span class="text-xs bg-emerald-950/60 border border-emerald-500/20 px-2.5 py-1 rounded text-gray-200">Shidiq (Jujur)</span>
+                                        <span class="text-xs bg-emerald-950/60 border border-emerald-500/20 px-2.5 py-1 rounded text-gray-200">Amanah</span>
+                                        <span class="text-xs bg-emerald-950/60 border border-emerald-500/20 px-2.5 py-1 rounded text-gray-200">Tawaduk (Rendah Hati)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-red-400 uppercase tracking-wider block mb-2">Akhlak Mazmumah (Tercela)</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="text-xs bg-red-950/40 border border-red-500/20 px-2.5 py-1 rounded text-gray-200">Syirik (Dosa Terberat)</span>
+                                        <span class="text-xs bg-red-950/40 border border-red-500/20 px-2.5 py-1 rounded text-gray-200">Riya (Pamer)</span>
+                                        <span class="text-xs bg-red-950/40 border border-red-500/20 px-2.5 py-1 rounded text-gray-200">Takabur (Sombong)</span>
+                                        <span class="text-xs bg-red-950/40 border border-red-500/20 px-2.5 py-1 rounded text-gray-200">Hasad (Dengki)</span>
+                                        <span class="text-xs bg-red-950/40 border border-red-500/20 px-2.5 py-1 rounded text-gray-200">Ghibah (Gosip)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fiqh & Muamalah -->
+                <div id="tab-fiqh" class="tab-panel hidden grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left: Fiqh Utama -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-3">Syarat Sah vs Rukun Shalat</h3>
+                            <p class="text-xs text-gray-400 mb-4">Sering sekali keluar untuk menjebak pemahaman fundamental calon mahasiswa.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-[#011a14] p-4 rounded-xl border border-themeGold-500/15">
+                                    <span class="text-xs font-black text-themeGold-400 uppercase tracking-widest block mb-1">Syarat Sah (SEBELUM)</span>
+                                    <p class="text-xs text-gray-400 leading-relaxed mb-2">Hal wajib yang harus terpenuhi di luar / sebelum masuk ibadah shalat dimulai.</p>
+                                    <ul class="text-xs text-gray-300 space-y-1">
+                                        <li><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Suci dari hadas besar/kecil</li>
+                                        <li><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Menutup aurat dengan benar</li>
+                                        <li><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Menghadap kiblat</li>
+                                        <li><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Masuk waktu shalat</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-[#011a14] p-4 rounded-xl border border-themeGold-500/15">
+                                    <span class="text-xs font-black text-themeGold-400 uppercase tracking-widest block mb-1">Rukun Shalat (DIDALAM)</span>
+                                    <p class="text-xs text-gray-400 leading-relaxed mb-2">Bagian integral, esensial, dan gerakan inti di dalam pelaksanaan ibadah.</p>
+                                    <ul class="text-xs text-gray-300 space-y-1">
+                                        <li><i class="fa-solid fa-circle-check text-themeGold-400 mr-1"></i> Niat dalam hati</li>
+                                        <li><i class="fa-solid fa-circle-check text-themeGold-400 mr-1"></i> Takbiratul ihram</li>
+                                        <li><i class="fa-solid fa-circle-check text-themeGold-400 mr-1"></i> Membaca Surah Al-Fatihah</li>
+                                        <li><i class="fa-solid fa-circle-check text-themeGold-400 mr-1"></i> Rukuk, iktidal, sujud & tumakninah</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fiqh Haji -->
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-2">Puncak Ibadah Haji: Wukuf</h3>
+                            <p class="text-xs text-gray-300 leading-relaxed mb-2">
+                                Dalam hadits terkenal disebutkan <strong class="text-themeGold-400">"Al-Hajju 'Arafah" (Haji adalah wukuf di Arafah)</strong>. Wukuf di padang Arafah pada tanggal 9 Zulhijah adalah rukun terpenting dari seluruh rangkaian haji. Jika wukuf terlewat, maka ibadah haji tersebut dipastikan tidak sah dan tidak dapat diganti dengan denda (dam).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: UU Zakat, Infak, Sedekah & Wakaf -->
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-3">ZISWAF Regulasi Indonesia</h3>
+                            <p class="text-xs text-gray-400 mb-4">Sesuai UU No. 23/2011 dan regulasi JDIH Kemenag RI:</p>
+                            <div class="space-y-3">
+                                <div class="bg-emerald-950/20 p-3 rounded-lg border border-themeGold-500/10">
+                                    <h4 class="font-bold text-white text-xs">Zakat</h4>
+                                    <p class="text-[11px] text-gray-400 mt-0.5">Wajib dibayarkan oleh muzaki kepada mustahik. Terdiri atas Zakat Mal & Zakat Fitrah.</p>
+                                </div>
+                                <div class="bg-emerald-950/20 p-3 rounded-lg border border-themeGold-500/10">
+                                    <h4 class="font-bold text-white text-xs">Infak & Sedekah</h4>
+                                    <p class="text-[11px] text-gray-400 mt-0.5">Sukarela. Infak khusus berupa harta benda; sedekah mencakup harta maupun nonharta (senyuman/tenaga).</p>
+                                </div>
+                                <div class="bg-emerald-950/20 p-3 rounded-lg border border-themeGold-500/10">
+                                    <h4 class="font-bold text-white text-xs">Wakaf (PP 42/2006)</h4>
+                                    <p class="text-[11px] text-gray-400 mt-0.5">Menahan pokok harta aslinya dan mengalirkan manfaatnya selamanya atau berjangka lewat Nazhir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sejarah & Kebudayaan Islam -->
+                <div id="tab-sejarah" class="tab-panel hidden grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Left: Timeline Utama -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="glass-card p-6 rounded-3xl">
+                            <h3 class="text-xl font-bold text-white mb-4">Garis Waktu (Timeline) Kilat SKI</h3>
+                            <div class="relative border-l border-themeGold-500/30 ml-3 space-y-6 text-xs text-gray-400">
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-themeGold-500"></div>
+                                    <span class="font-bold text-themeGold-400 text-sm block">Kerasulan & Wahyu (610 M)</span>
+                                    <span>Nabi Muhammad SAW menerima wahyu perdana (QS. Al-Alaq 1-5) di Gua Hira.</span>
+                                </div>
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-themeGold-500"></div>
+                                    <span class="font-bold text-themeGold-400 text-sm block">Hijrah ke Madinah (622 M)</span>
+                                    <span>Momentum hijrah yang kemudian disepakati oleh Umar bin Khattab sebagai awal Tahun Kalender Hijriah.</span>
+                                </div>
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-themeGold-500"></div>
+                                    <span class="font-bold text-themeGold-400 text-sm block">Perang Badar (2 Hijriah / 624 M)</span>
+                                    <span>Perang fisik pertama yang berskala besar, krusial bagi keberlangsungan pertahanan umat Islam.</span>
+                                </div>
+                                <div class="relative pl-6">
+                                    <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-themeGold-500"></div>
+                                    <span class="font-bold text-themeGold-400 text-sm block">Fathu Makkah (8 Hijriah / 630 M)</span>
+                                    <span>Penaklukan kota Makkah secara damai, pembersihan berhala di Ka'bah secara total.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Khulafa Rasyidun & Wali Songo -->
+                    <div class="space-y-6 flex flex-col justify-between">
+                        <div class="glass-card p-6 rounded-3xl space-y-4">
+                            <div>
+                                <h3 class="text-base font-extrabold text-white mb-2">Khulafa' al-Rasyidun (ABUA)</h3>
+                                <ol class="text-xs text-gray-400 space-y-2">
+                                    <li><strong class="text-themeGold-400">1. Abu Bakar Ash-Shiddiq:</strong> Khalifah perdana, pemutus riddah & kodifikasi awal Al-Qur'an.</li>
+                                    <li><strong class="text-themeGold-400">2. Umar bin Khattab:</strong> Administrasi negara maju, ekspansi, & penentuan kalender Hijriah.</li>
+                                    <li><strong class="text-themeGold-400">3. Utsman bin Affan:</strong> Standarisasi penulisan mushaf Al-Qur'an (Rasm Usmani).</li>
+                                    <li><strong class="text-themeGold-400">4. Ali bin Abi Thalib:</strong> Khalifah ke-4 yang menghadapi beragam sengketa politik internal.</li>
+                                </ol>
+                            </div>
+                            <hr class="border-emerald-950">
+                            <div>
+                                <h3 class="text-base font-extrabold text-white mb-2">Wali Songo (Dakwah Budaya)</h3>
+                                <p class="text-xs text-gray-400 leading-relaxed">
+                                    Penyebar Islam legendaris di Pulau Jawa yang terkenal berdakwah dengan integrasi adat/kebudayaan lokal secara ramah (wayang, gamelan), bukan dengan kekerasan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cheat Sheet 20 Fakta Top (Interactive Search) -->
+        <section id="cheatsheet" class="py-16 bg-[#02221b] border-y border-themeGold-500/10 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight">Cheat Sheet: 20 Fakta Top UMPTKIN</h2>
+                        <p class="text-gray-400 mt-2 text-sm">Cari kata kunci kilat untuk mereview memori Anda dalam 5 detik saja per konsep.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 relative max-w-xs w-full">
+                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                        </span>
+                        <input type="text" id="cheat-search" oninput="filterCheatSheet()" placeholder="Cari materi (misal: 'zakat')..." class="w-full bg-[#011a14] border border-themeGold-500/20 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-themeGold-500 placeholder-gray-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="cheatsheet-grid">
+                    <!-- Fakta Cards will be injected dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulasi Kuis Interaktif -->
+        <section id="kuis" class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="glass-card p-8 rounded-3xl relative overflow-hidden border border-themeGold-500/20">
+                <!-- Golden Accent Corner -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-themeGold-500/5 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="flex items-center justify-between mb-6 border-b border-emerald-950 pb-4">
+                    <div>
+                        <span class="text-xs font-bold text-themeGold-400 tracking-wider block">SIMULASI SSE PILIHAN GANDA</span>
+                        <h2 class="text-2xl font-black text-white">Uji Pemahaman Kilat</h2>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-400 block font-semibold">Skor Benar:</span>
+                        <span id="quiz-score" class="text-lg font-black text-themeGold-400 text-glow">0 / 5</span>
+                    </div>
+                </div>
+
+                <!-- Quiz Main Area -->
+                <div id="quiz-area">
+                    <div class="mb-2">
+                        <span id="question-number" class="text-xs font-extrabold bg-[#011a14] text-themeGold-400 px-2.5 py-1 rounded border border-themeGold-500/10">SOAL 1</span>
+                    </div>
+                    <p id="question-text" class="text-base sm:text-lg text-white font-bold leading-relaxed mb-6">
+                        Bagian hadits yang berupa rantai perawi disebut...
+                    </p>
+
+                    <div class="space-y-3" id="options-container">
+                        <!-- Options buttons injected here -->
+                    </div>
+
+                    <!-- Explanations & Next Area -->
+                    <div id="explanation-container" class="mt-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/10 hidden">
+                        <p id="explanation-status" class="text-xs font-bold uppercase tracking-wider mb-1"></p>
+                        <p id="explanation-text" class="text-xs sm:text-sm text-gray-300 leading-relaxed"></p>
+                    </div>
+
+                    <div class="mt-8 flex justify-end">
+                        <button id="next-btn" onclick="nextQuestion()" class="hidden px-5 py-2.5 bg-gradient-to-r from-themeGold-500 to-amber-500 text-[#022c22] font-bold rounded-xl text-sm hover:from-themeGold-600 hover:to-amber-600 transition">
+                            Pertanyaan Selanjutnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Area (hidden initially) -->
+                <div id="result-area" class="hidden text-center py-8">
+                    <div class="w-16 h-16 rounded-full bg-themeGold-500/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-trophy text-themeGold-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white">Simulasi Selesai!</h3>
+                    <p class="text-sm text-gray-400 mt-2">Anda berhasil menyelesaikan kuis kilat adaptif ini.</p>
+                    
+                    <div class="my-6 inline-block bg-[#011a14] px-6 py-3 rounded-2xl border border-themeGold-500/10">
+                        <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold block">Skor Akhir Anda:</span>
+                        <span id="final-score" class="text-3xl font-black text-themeGold-400 text-glow">0 / 5</span>
+                    </div>
+
+                    <p id="evaluation-message" class="text-sm text-themeGold-400 max-w-md mx-auto mb-8 font-semibold"></p>
+
+                    <button onclick="restartQuiz()" class="px-5 py-2.5 bg-emerald-950/80 hover:bg-emerald-900 border border-themeGold-500/20 text-white font-bold rounded-xl text-sm transition">
+                        <i class="fa-solid fa-rotate-left mr-1.5"></i> Ulangi Kuis
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Beautiful Sticky Footer -->
+    <footer class="glass-card border-t border-themeGold-500/10 mt-16 py-8 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        <!-- Footer Blur Glow -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-40 bg-themeGold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+            <!-- Left Side -->
+            <div class="text-left">
+                <p class="text-sm font-extrabold text-white">UM-PTKIN Hafalan Kilat 2026</p>
+                <p class="text-xs text-gray-400 mt-1">Dirancang khusus untuk kesuksesan pendaftaran ujian nasional.</p>
+            </div>
+
+            <!-- Middle Socials & Creator Credit -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs font-semibold text-gray-400">Created by <strong class="text-white font-bold">Vicky</strong></span>
+                <div class="flex space-x-4 mt-2">
+                    <a href="https://instagram.com/mvckyprytna_" target="_blank" class="text-gray-400 hover:text-themeGold-400 transition text-sm flex items-center space-x-1">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@mvckyprytna_</span>
+                    </a>
+                    <a href="https://vickydisini.my.id" target="_blank" class="text-gray-400 hover:text-themeGold-400 transition text-sm flex items-center space-x-1">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span>vickydisini.my.id</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right side disclaimer -->
+            <div class="text-right text-xs text-gray-500 max-w-xs leading-relaxed md:block hidden">
+                Bahan rangkuman ini bersifat adaptif berdasarkan kurikulum literasi keagamaan nasional Indonesia.
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script>
+        // 20 top facts for Cheat Sheet
+        const facts = [
+            { id: 1, title: "Sanad", desc: "Rantai penutur atau periwayatan (Siapa meriwayatkan hadits dari siapa)." },
+            { id: 2, title: "Matan", desc: "Redaksi isi, kalimat, atau teks sabda dari hadits itu sendiri." },
+            { id: 3, title: "Makki", desc: "Ayat yang diturunkan sebelum Hijrah, mayoritas bertema Tauhid & Akhirat." },
+            { id: 4, title: "Madani", desc: "Ayat diturunkan setelah Hijrah, berisi tata cara hukum sosial & muamalah." },
+            { id: 5, title: "QS. Al-Ikhlas", desc: "Surah yang berisi perihal ketauhidan mutlak bahwa Allah adalah Esa." },
+            { id: 6, title: "QS. Al-Hujurat 10-13", desc: "Ayat dasar ukhuwah islamiyah, saling menghargai, dan ukuran takwa." },
+            { id: 7, title: "QS. Al-Ma'un", desc: "Kritik tajam bagi orang salat namun abai memberi santunan sosial." },
+            { id: 8, title: "QS. Al-'Asr", desc: "4 kriteria bebas dari rugi: iman, beramal, nasihat kebenaran & sabar." },
+            { id: 9, title: "Hadits Jibril", desc: "Hadits terpopuler yang mengikat kesatuan Islam, Iman, dan Ihsan." },
+            { id: 10, title: "Tauhid Rububiyah", desc: "Keimanan bahwa Allah adalah satu-satunya Pencipta dan Penguasa alam." },
+            { id: 11, title: "Tauhid Uluhiyah", desc: "Keimanan bahwa hanya Allah yang berhak disembah tanpa sekutu." },
+            { id: 12, title: "Ihsan", desc: "Beribadah seolah melihat Allah atau meyakini mutlak didengar & dilihat-Nya." },
+            { id: 13, title: "Syarat Shalat", desc: "Ketentuan mutlak yang harus dipenuhi sebelum salat (misalnya: wudhu)." },
+            { id: 14, title: "Rukun Shalat", desc: "Gerakan/bacaan wajib saat salat berlangsung (misal: Fatihah, ruku)." },
+            { id: 15, title: "Zakat", desc: "Kewajiban finansial tertentu kepada 8 asnaf penerima sesuai aturan syariat." },
+            { id: 16, title: "Wakaf", desc: "Menyerahkan kepemilikan aset berharga untuk kemaslahatan umat (Pokok ditahan)." },
+            { id: 17, title: "Hijrah 622 M", desc: "Titik tolak perpindahan dakwah yang dijadikan patokan awal kalender Hijriah." },
+            { id: 18, title: "Perang Badar", desc: "Perang fisik berskala besar pertama dalam sejarah perjuangan awal Islam." },
+            { id: 19, title: "Utsman bin Affan", desc: "Khalifah ketiga yang menyatukan logat mushaf Al-Qur'an (Rasm Usmani)." },
+            { id: 20, title: "Wali Songo", desc: "Sembilan tokoh dakwah legendaris di Pulau Jawa bermedia seni & budaya." }
+        ];
+
+        // Quiz Questions Data (Matching the 5 questions from the PDF + clear conceptual options)
+        const quizQuestions = [
+            {
+                q: "Bagian hadits yang berupa rantai perawi disebut...",
+                options: ["A. matan", "B. sanad", "C. ijma'", "D. qiyas"],
+                answer: 1, // index for option B
+                explanation: "Sanad merupakan rantai periwayatan (transmisi), sedangkan matan adalah isi dari redaksi teks hadits tersebut."
+            },
+            {
+                q: "Surah yang paling tegas menerangkan bahwa Allah Maha Esa, tidak beranak dan tidak diperanakkan adalah...",
+                options: ["A. al-Ma'un", "B. al-'Asr", "C. al-Ikhlas", "D. al-Fil"],
+                answer: 2, // index for option C
+                explanation: "QS. Al-Ikhlas (112: 1-4) menegaskan ketauhidan murni bahwa Allah itu Esa dan tidak diperanakkan."
+            },
+            {
+                q: "Istilah hadits yang menunjukkan banyaknya jalur periwayatan sampai secara akal sangat sulit terjadi kesepakatan dusta adalah...",
+                options: ["A. hasan", "B. mutawatir", "C. sahih", "D. daif"],
+                answer: 1, // index for option B
+                explanation: "Hadits Mutawatir diukur dari kuantitas/banyaknya jalur perawi independen pada setiap tingkatan sanad, bukan sekadar kualitasnya saja."
+            },
+            {
+                q: "Menghadap kiblat sebelum melaksanakan shalat termasuk ke dalam...",
+                options: ["A. rukun shalat", "B. sunnah shalat", "C. syarat sah shalat", "D. pembatal shalat"],
+                answer: 2, // index for option C
+                explanation: "Syarat sah harus dipenuhi SEBELUM salat dimulai, sedangkan rukun shalat dilaksanakan di DALAM pelaksanaan salat."
+            },
+            {
+                q: "Peristiwa penting bersejarah yang dijadikan tonggak awal mulanya kalender hijriah adalah...",
+                options: ["A. kelahiran Nabi Muhammad", "B. hijrah ke Madinah", "C. terjadinya Perang Uhud", "D. peristiwa Fathu Makkah"],
+                answer: 1, // index for option B
+                explanation: "Peristiwa Hijrah dari Makkah ke Madinah disepakati pada masa Khalifah Umar bin Khattab sebagai awal tahun Kalender Hijriah."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedOption = null;
+
+        // On document load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCheatSheet();
+            loadQuestion();
+        });
+
+        // Initialize Cheat Sheet Card
+        function renderCheatSheet() {
+            const container = document.getElementById('cheatsheet-grid');
+            container.innerHTML = '';
+            facts.forEach(fact => {
+                container.innerHTML += `
+                    <div class="glass-card p-5 rounded-2xl border border-themeGold-500/10 hover:border-themeGold-500/40 transition duration-300 card-item" data-title="${fact.title.toLowerCase()}" data-desc="${fact.desc.toLowerCase()}">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="w-6 h-6 rounded-lg bg-themeGold-500/10 flex items-center justify-center font-bold text-xs text-themeGold-400">${fact.id}</span>
+                            <h4 class="font-bold text-white text-sm">${fact.title}</h4>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">${fact.desc}</p>
+                    </div>
+                `;
+            });
+        }
+
+        // Live Filter Cheat Sheet
+        function filterCheatSheet() {
+            const query = document.getElementById('cheat-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.card-item');
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title');
+                const desc = card.getAttribute('data-desc');
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Tab Switching
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 text-gray-400 hover:text-white";
+            });
+
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            document.getElementById(`btn-${tabId}`).className = "tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition flex items-center space-x-2 bg-gradient-to-r from-themeGold-500 to-amber-500 text-[#022c22]";
+        }
+
+        // Checklist Progress
+        function toggleTask(id) {
+            const checkbox = document.querySelector(`#${id} input`);
+            const card = document.getElementById(id);
+            if (checkbox.checked) {
+                card.classList.add('opacity-55', 'border-l-emerald-500');
+                card.classList.remove('border-l-themeGold-500');
+            } else {
+                card.classList.remove('opacity-55', 'border-l-emerald-500');
+                card.classList.add('border-l-themeGold-500');
+            }
+            calculateProgress();
+        }
+
+        function calculateProgress() {
+            const total = 5;
+            const checked = document.querySelectorAll('#planner-tasks input:checked').length;
+            const percentage = Math.round((checked / total) * 100);
+            document.getElementById('progress-percent').innerText = `${percentage}%`;
+        }
+
+        // Quiz Logic
+        function loadQuestion() {
+            const currentQuestion = quizQuestions[currentQuestionIndex];
+            document.getElementById('question-number').innerText = `SOAL ${currentQuestionIndex + 1} DARI ${quizQuestions.length}`;
+            document.getElementById('question-text').innerText = currentQuestion.q;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            currentQuestion.options.forEach((opt, idx) => {
+                optionsContainer.innerHTML += `
+                    <button onclick="selectOption(${idx})" id="opt-${idx}" class="quiz-opt-btn w-full text-left p-4 rounded-xl bg-emerald-950/20 hover:bg-emerald-950/50 border border-themeGold-500/10 transition-all font-semibold text-sm text-gray-300 flex items-center justify-between">
+                        <span>${opt}</span>
+                        <div class="circle-check-marker w-5 h-5 rounded-full border border-themeGold-500/20 flex items-center justify-center text-xs"></div>
+                    </button>
+                `;
+            });
+
+            document.getElementById('explanation-container').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+            selectedOption = null;
+        }
+
+        function selectOption(index) {
+            if (selectedOption !== null) return; // Prevent change after answer
+
+            selectedOption = index;
+            const currentQuestion = quizQuestions[currentQuestionIndex];
+            const optionButtons = document.querySelectorAll('.quiz-opt-btn');
+            
+            optionButtons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === currentQuestion.answer) {
+                    btn.classList.add('bg-emerald-800/40', 'border-emerald-500', 'text-white');
+                    btn.querySelector('.circle-check-marker').innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
+                } else if (idx === index) {
+                    btn.classList.add('bg-red-950/40', 'border-red-500', 'text-white');
+                    btn.querySelector('.circle-check-marker').innerHTML = '<i class="fa-solid fa-circle-xmark text-red-500"></i>';
+                }
+            });
+
+            const expContainer = document.getElementById('explanation-container');
+            const expStatus = document.getElementById('explanation-status');
+            const expText = document.getElementById('explanation-text');
+
+            if (index === currentQuestion.answer) {
+                score++;
+                expStatus.innerText = "Benar sekali!";
+                expStatus.className = "text-xs font-bold uppercase tracking-wider mb-1 text-emerald-400";
+                document.getElementById('quiz-score').innerText = `${score} / ${quizQuestions.length}`;
+            } else {
+                expStatus.innerText = "Kurang Tepat!";
+                expStatus.className = "text-xs font-bold uppercase tracking-wider mb-1 text-red-400";
+            }
+
+            expText.innerText = currentQuestion.explanation;
+            expContainer.classList.remove('hidden');
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-area').classList.add('hidden');
+            document.getElementById('result-area').classList.remove('hidden');
+            document.getElementById('final-score').innerText = `${score} / ${quizQuestions.length}`;
+            
+            const messageEl = document.getElementById('evaluation-message');
+            if (score === 5) {
+                messageEl.innerText = "Luar biasa! Hafalan keislaman Anda sudah sangat matang dan siap menghadapi ujian SSE UM-PTKIN.";
+            } else if (score >= 3) {
+                messageEl.innerText = "Kerja bagus! Ingatan Anda cukup kuat, baca kembali Cheat Sheet pada bagian yang sempat salah tadi.";
+            } else {
+                messageEl.innerText = "Waktu mepet bukan alasan. Segera baca kembali 20 Fakta Top di atas lalu ulangi kuis ini untuk hasil maksimal!";
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('quiz-score').innerText = `0 / ${quizQuestions.length}`;
+            document.getElementById('result-area').classList.add('hidden');
+            document.getElementById('quiz-area').classList.remove('hidden');
+            loadQuestion();
+        }
+    </script>
+</body>
+</html>
